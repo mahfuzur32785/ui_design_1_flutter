@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design_1/home_page_widgets/app_bar.dart';
+import 'package:ui_design_1/home_page_widgets/job_list/job_list_view.dart';
 import 'package:ui_design_1/home_page_widgets/search_box.dart';
 import 'package:ui_design_1/home_page_widgets/tag_list_button.dart';
 
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
               Expanded(
                 flex: 2,
                 child: Container(
-                  color: Color(0xFFFAFAFA),
+                  color: Color(0xFFF6F6F6),
                 ),
               ),
               Expanded(
@@ -34,12 +35,15 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 50),
-            child: Column(
-              children: [
-                CustomAppBar(),
-                CustomSearchBox(),
-                CustomTagButton(),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  CustomAppBar(),
+                  CustomSearchBox(),
+                  CustomTagButton(),
+                  CustomJobListView(),
+                ],
+              ),
             ),
           )
         ],

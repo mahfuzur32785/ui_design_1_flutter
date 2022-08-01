@@ -7,7 +7,7 @@ class CustomSearchBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 10,vertical: 25),
-      height: 300,
+      height: MediaQuery.of(context).size.height*0.35,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(40),
